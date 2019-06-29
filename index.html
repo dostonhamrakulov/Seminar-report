@@ -230,7 +230,7 @@ function createAndSendDocument() {
         In this research project we have used several tools and devices to implement theoretical concepts.
         These devices and tools are following:
       </p>
-      <figure>
+      <figure id="Figure_4-1">
           <img src="Figure_4-1.png" alt="User tools and devices"/>
           <figcaption>
             <strong>Figure 4.1</strong>:  User tools and devices.
@@ -262,13 +262,13 @@ function createAndSendDocument() {
         based on from which direction a sound is coming.
       </p>
       <figure>
-          <img src="Figure_4-2.png" alt="Matrix Voice’s microphones location"/>
+          <img id="Figure_4-2" src="Figure_4-2.png" alt="Matrix Voice’s microphones location"/>
           <figcaption>
             <strong>Figure 4.2</strong>: Matrix Voice’s microphones location
           </figcaption>
       </figure>
       <p>
-        The Figure 4.1 shows that each microphone is located in specific position and has specific cardinalities.
+        The <a href="#Figure_4-2">Figure 4.2</a> shows that each microphone is located in specific position and has specific cardinalities.
       </p>
 
       <h5>USB WiFi Adapter:</h5>
@@ -291,14 +291,14 @@ function createAndSendDocument() {
           of the user using Matrix Voice devices.
         </p>
       	<figure>
-            <img src="Figure_4-3.png" alt="Speaking to Matrix Voice"/>
+            <img id="Figure_4-3" src="Figure_4-3.png" alt="Speaking to Matrix Voice"/>
             <figcaption>
               <strong>Figure 4.3</strong>: Speaking to Matrix Voice
             </figcaption>
         </figure>
     </section>
     <section>
-        <h2>4.3 - Discovering capabilities of Matrix Voice</h2>
+        <h3>4.3 - Discovering capabilities of Matrix Voice</h3>
         <p>
           It is obvious that we need microphones which can take clear voice from long distance even
           if the voice level is really low. In order to know the reliability of clear voice delivery
@@ -310,6 +310,46 @@ function createAndSendDocument() {
           and from 12 meters the voice’s quality is low and Google Assistant was not recording correct context.
         </p>
 	  </section>
+    <section>
+      <h3>4.4 - Determining the direction of the voice</h3>
+      <p>
+        The direction of the user’s voice is possible to determine with Matrix Voice due to the fact
+        that Matrix Voice has microphones which are collected in certain cardinalities and from those
+        cardinalies can determine the direction of the voice. As <a href="#Figure_4-2">Figure 4.2</a>,
+        shows that each microphone
+        has X and Y cardinalities and each microphone produces distinct voice strength, depending
+        on which a microphone is targeted.
+      </p>
+      <figure>
+          <img id="Figure_4-4" src="Figure_4-4.png" alt="Directed Voice to distinct microphone of Matrix Voice"/>
+          <figcaption>
+            <strong>Figure 4.4</strong>: Directed Voice to distinct microphone of Matrix Voice
+          </figcaption>
+      </figure>
+      <p>
+        As long as the voice is recorded, each microphone produces different voice strength as
+        it is shown in <a href="#Figure_4-2">Figure 4.2</a>. For example, as in <a href="#Figure_4-3">Figure 4.3</a>, the user speaks towards microphones
+        and we can check a voice strength and compare it with actual voice strength of each microphone.
+        In the <a href="#Figure_4-4">Figure 4.4</a>, we have described that a user speaking to Microphone M3 and it has voice
+        strengths between 12 000 and 16 000, and we compare a taken voice strength in that range
+        as it is shown. If the received voice strength is between those range, we can say that
+        a user is speaking to Microphone M3 and most importantly from this point, we can determine
+        the direction due to cardinalities of M3.
+        <br>
+        Having understood working principles of obtaining a direction of the voice,
+        we can conclude that this approach can be enhanced by increasing the number of Matrix Voices
+        devices (input points). To get optimal a direction of the voice, it is enough to have
+        3 Matrix Voices input points. The <a href="#Figure_4-5">Figure 4.5</a> shows that we can obtain an intersection
+        point of all cardinalities of 3 Matrix Voice while those 3 Matrix Voice will receive
+        the voice and produce different cardinalities for a targeted microphone.
+      </p>
+      <figure>
+          <img id="Figure_4-5" src="Figure_4-5.png" alt="Intersection Point of three Matrix Voices’ Cardinalities"/>
+          <figcaption>
+            <strong>Figure 4.5</strong>: Intersection Point of three Matrix Voices’ Cardinalities
+          </figcaption>
+      </figure>
+    </section>
 	  <section class="references">
 	   		<h2>6. References</h2>
     		<p class="reference" id="r1">
