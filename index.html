@@ -6,6 +6,27 @@
   <link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <style>
+      #scroolUpButton {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: grey;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+      }
+
+      #scroolUpButton:hover {
+        background-color: red;
+      }
+  </style>
 </head>
 <body>
     <header>
@@ -18,6 +39,7 @@
     			Chemnitz, Germany
     		</h3>
     </header>
+    <button onclick="topFunction()" id="scroolUpButton" title="Go to top">Top</button>
     <section>
     	<h2>Chapter 1: - Introduction to the topic</h2>
       <h3>1.1 - Problem Domain</h3>
@@ -76,7 +98,7 @@
       location of the user such as using Beacons, Bluetooth or WiFi technologies. But all of those approaches
       requires the user to carry a device.
       <br>
-      Therefore, we have decided to make research on the voice location 
+      Therefore, we have decided to make research on the voice location
       for indoor user location identification for a smart home.
     </p>
   </section>
@@ -356,5 +378,24 @@ function createAndSendDocument() {
     		<p class="reference" id="r12">[12] Thoma, Jörg (2014, April 15). OwnCloud - Dropbox Alternative fürs Heimnetzwerk [Online]. Available <a href="http://www.golem.de/news/owncloud-dropbox-alternative-fuers-heimnetzwerk-1404-105843.html">http://www.golem.de/news/owncloud-dropbox-alternative-fuers-heimnetzwerk-1404-105843.html</a> (29.06.2014)</p>
     		<p class="reference" id="r13"> [13] eigene aufgesetzte ownCloud </p>
 	</section>
+
+  <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("scroolUpButton").style.display = "block";
+      } else {
+        document.getElementById("scroolUpButton").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 </body>
 </html>
