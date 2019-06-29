@@ -107,56 +107,15 @@
     	<h3> 2.1. Allgemeiner Überblick </h3>
 
     	<p>
-        Die Attraktivität, Daten in der Cloud zu speichern, ergibt sich in der Regel aus mindestens einer der folgenden Funktionsmöglichkeiten. Grundlegende Idee ist
-        die Möglichkeit eine Kopie einer lokal gespeicherten Datei zu erstellen und durch Speichern in der Cloud diese Datei von überall abrufen zu können. Wenn
-        dieser Zugriff nun von mehreren Geräten aus geschieht, ergibt sich daraus die Notwendigkeit der Synchronisation von solchen Daten, sodass diese immer auf dem
-        aktuellsten Stand sind. Des Weiteren ist das Teilen von Daten und die variable Rechtevergabe eine wichtige Cloud-Funktion. Auch hier wird wieder die Synchronisation
-        zu einem wichtigen Thema, vor allem wenn es um Team- oder Projektarbeiten geht. Zu guter Letzt wird gerne auf die Option des Backups zurückgegriffen. Hier werden
-        über einen längeren Zeitraum immer wieder Kopien von Dateien erstellt, welche dann die verschiedenen Versionen innerhalb eines Entwicklungsprozesses
-        darstellen und die Möglichkeit zur Wiederherstellung älterer Versionen bieten <a href="#r3">[3]</a>.
-    	</p>
-    	<p>
-        Einer der bekanntesten Anbieter und mit über 300 Millionen registrierten Nutzern <a href="#r7">[7]</a>
-    	ist Dropbox. Als dieser Dienst 2008 online ging, stand zuerst die einfache Verwaltung von Daten unabhängig vom persönlichen Standort im Vordergrund <a href="#r7">[7]</a>. Mittlerweile wurden weitere
-        Funktionen hinzugefügt. Als kostenloser Speicher stehen 2GB zur Verfügung, mit der zusätzlichen Option zur Erweiterung auf bis zu 16GB. Außerdem beinhaltet das
-        Leistungsspektrum die Möglichkeit Dateien und Ordner zu teilen, Offline zu bearbeiten und ältere Versionen wiederherzustellen. Es gibt mehrere
-        Wege, diese Optionen zu nutzen. Angefangen über ein leicht bedienbares Webinterface im Browser gibt es außerdem Clients für Windows, MacOS und
-        Linux. Für Smartphone und Tablet stehen außerdem Apps für die Betriebssysteme Blackberry, iOs und Android zur Verfügung <a href="#r7">[7]</a>.
-    	</p>
-    	<p>
-        Als einer der Marktführer bei Internetdienstleistungen bietet Google.Inc ebenfalls einen Cloud Service an. Dieser entwickelte sich aus der Anwendung
-        GoogleDocs und ging 2012 online. Laut eigenen Angaben benutzen über 190 Millionen Anwender diesen bereitgestellten und in die Vielzahl von eigenen
-        Anwendungen integrierten Service <a href="#r8">[8]</a>. Der kostenfreie Speicherplatz ist
-        um einiges größer als der von Dropbox, nämlich 15GB. Neben den bereits erläuterten Standardfunktionen wie Synchronisation und Offline Bearbeitung gibt es
-        zusätzlich beim Teilen die Möglichkeit die Rechte der Dritten zu definieren. Außerdem wird durch die Integration der anderen Google Dienste, wie
-        beispielsweise Gmail, Google+ oder Picasa Webalben, das Speichern bestimmter Daten in der Cloud vereinfacht. So kann zum Beispiel ein Dokument im Anhang
-        einer Email direkt in GoogleDrive abgelegt werden <a href="#r8">[8]</a>. Die Nutzung des Dienstes ist auch hier sowohl über den Browser, als auch über Clients für alle PC
-    	Betriebssysteme oder Apps für mobile Geräte möglich.
+        Wiederherstellung älterer Versionen bieten <a href="#r3">[3]</a>.
     	</p>
         <figure>
         <pre>
-function createAndSendDocument() {
-  // Create a new Google Doc named 'Hello, world!'
-  var doc = DocumentApp.create('Hello, world!');
+            function createAndSendDocument() {
+              // Create a new Google Doc named 'Hello, world!'
+              var doc = DocumentApp.create('Hello, world!');
 
-  // Access the body of the document, then add a paragraph.
-  doc.getBody().appendParagraph('This document was created ');
-
-  // Get the URL of the document.
-  var url = doc.getUrl();
-
-  // Get the email address of the active user - that's you.
-  var email = Session.getActiveUser().getEmail();
-
-  // Get the name of the document to use as an email subject line.
-  var subject = doc.getName();
-
-  // Append a new string to the "url" variable to use as an email.
-  var body = 'Link to your doc: ' + url;
-
-  // Send yourself an email with a link to the document.
-  GmailApp.sendEmail(email, subject, body);
-}
+            }
         </pre>
         <figcaption>
             <strong>Listing 1</strong>: Beispiel Google Script: Spreadsheet erstellen und Link per Mail senden <a href="#r7">[7]</a>
@@ -167,51 +126,15 @@ function createAndSendDocument() {
     <section>
     	<h3>2.2. Datenschutz und -sicherheit</h3>
     	<p>
-        Bei solchen hohen Nutzerzahlen haben beide Anbieter eine große Verantwortung bezüglich der Sicherheit der Daten. Dazu zählen natürlich angemessene
-        Datenschutzrichtlinien und Verschlüsselungstechniken, aber auch die Ermutigung und Aufklärung des Anwenders den eigenen Account so einbruchssicher wie
-        möglich zu gestalten. Dies beginnt schon bei der Registrierung, nämlich mit der Festlegung eines starken Passworts.
+        some text
     	</p>
-    	<p>
-        Beide Dienste weisen bei der Registrierung auf die Stärke des Passworts mit Hilfe eines Farbbalkens hin. Die Einstufung erhöht sich je länger die Eingabe
-        wird und je mehr zwischen Groß- und Kleinschreibung, Zahlen und Sonderzeichen variiert wird <a href="#r3">[3]</a>. Zusätzlich wird von beiden die zweistufige Verifizierung stark
-        empfohlen, bei der nicht nur Username und Passwort, sondern ein zusätzlicher Pin ans Handy gesendet wird, um sicherzustellen, dass es sich wirklich um
-        den bestimmten Nutzer handelt. Aber auch hier unterscheiden sich Google und Dropbox in den Details der Umsetzung. Während Dropbox diesen Code entweder per SMS verschickt
-        oder über eine App generieren lässt <a href="#r7">[7]</a>, bietet Google zusätzlich die Übermittlung per Sprachanruf und die Variante der Backup-Codes an <a href="#r8">[8]</a>. Letztere sind vor
-        allem nützlich, wenn das Smartphone bzw. der Empfang gerade nicht zur Hand ist.
-    	</p>
-    	<p>
-        Der nächste wichtige Sicherheitsaspekt ist die Übertragung der Daten. Diese findet bei beiden selbstverständlich über SSL/TSL und HTTPS statt. Danach
-        findet die serverseitige Verschlüsselung über AES-256 bei Dropbox <a href="#r7">[7]</a> und AES-128 bei Google <a href="#r8">[8]</a> statt. Beide verschlüsseln die Daten
-        jedoch mit eigenen generierten Schlüsseln, was zu der Kritik führt, dass „[s]ince Dropbox itself encrypts the data on the server-side, users cannot be sure
-        by cryptographic means that all stored data is highly confidential“ <a href="#r3">[3]</a>. Über Google ist die Kritik sogar noch lauter, denn hier wird
-        erst seit gut einem Jahr serverseitig verschlüsselt <a href="#r1">[1]</a>. Zuvor wiesen Mitarbeiter des GoogleDrive Team
-        nur auf die sichere Kommunikation zwischen Server und Client hin bzw. machten auf den Gebrauch der zwei-Schritt-Verifizierung aufmerksam <a href="#r1">[1]</a>.
-    	Dass die Schlüssel jedoch selbst generiert und verwaltet werden, sorgt auch hier für Unwohlsein <a href="#r1">[1]</a>.
-    	</p>
-    	<p>
-        Aus diesem Problem hat sich ein ganz eigener Markt entwickelt. Dropbox selbst weist in ihrem Helpcenter auf „zahlreiche Drittanbieter“ <a href="#r7">[7]</a>
-        hin, mit Hilfe welcher Anwender ihre Daten selber verschlüsseln können, bevor sie diese in die Cloud hochladen. Auch Borgmann et al. kommen zu dem Schluss,
-        dass es „a whole range of alternative methods“<a href="#r3">[3]</a> gibt, um die eigenen Daten schon lokal zu verschlüsseln und selber die Schlüssel zu verwalten. Einer
-        dieser Anbieter ist Boxcryptor, 2011 gegründet und mit mittlerweile über 1 Millionen Downloads oft genutzt <a href="#r4">[4]</a>.
-    	</p>
-    	<p>
-        Boxcryptor ist eine Anwendung die speziell zur Verschlüsselung von Daten, welche anschließend in der Cloud gespeichert werden sollen, entwickelt wurde. Das
-        Prinzip ist recht simpel. Die zu verschlüsselnden Daten werden in einem entsprechenden Ordner auf einem virtuellen Laufwerk abgelegt und dort mit Hilfe der
-        AES-256 und RSA Algorithmen verschlüsselt. Danach erst werden die Dateien in den Cloud Ordner weitergegeben. Verschlüsselte Daten sind farblich markiert
-        und leicht von anderen, nicht verschlüsselten Daten, zu unterscheiden. Diese Software ist kompatibel mit allen großen Cloud Dienst Anbietern und allen Betriebssystemen. Auch für Android, iOS und
-        Blackberry gibt es Apps, sodass hier ebenfalls keine Einschränkung besteht <a href="#r4">[4]</a>.
-    	</p>
+
     </section>
     <section>
     	<h2>3. Alternativen</h2>
     	<h3>3.1. BitTorrent Sync</h3>
     	<p>
-        Neben zusätzlichen Verschlüsselungssoftwares, die mit Cloud Diensten zusammen angewendet werden können, haben sich aber auch Dienste entwickelt, die auf
-        Serverspeicherung gänzlich verzichten, und dennoch die gleichen Vorteile versprechen. Zwar noch in der Beta Phase, aber trotzdem ein vielversprechendes Konzept,
-        präsentiert beispielsweise BitTorrent Sync. Hier werden Daten direkt zwischen Geräten synchronisiert. Dazu müssen diese in dem entsprechenden Sync Ordner
-        abgelegt werden, woraufhin ein 20 Byte langer Geheimschlüssel generiert wird. Über diesen Schlüssel können anschließend andere Geräte auf
-    	diese Daten zugreifen. Dies ermöglicht ebenfalls das Teilen von Daten mit Dritten. Mit Hilfe drei verschiedener Einstufungen der Geheimschlüssel, auch    <em>Secrets </em> genannt,
-    	ist es möglich, Berechtigungen zuzuschreiben und sogar ein zeitliches Limit des Teilens zu setzen <a href="#r2">[2]</a>.
+        some textingn <a href="#r2">[2]</a>.
     	</p>
 
 	  </section>
