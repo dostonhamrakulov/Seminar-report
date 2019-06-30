@@ -58,17 +58,18 @@
          significantly better result.
     	</p>
     	<p>
-        The need to determine the location and position of objects, people in
-        a building has become more important in recent times for businesses
-        such as shopping-malls, hotels, museums, airports, universities,
-        inventory and logistics companies who need to be able to track and
-        monitor movement in and out of their facilities and for personal
-        use in a smart home environment where a user needs to be identified
-        in order to personalize the service offered by smart devices. With
-        tremendous improvement being achieved in the area of wireless
-        connectivity, coupled with the development of IoT devices with
-        various sensors which has contributed to the rise in popularity
-        of smart homes<a href="#r2">[2]</a>.
+        The need to determine the location or position of objects and people in a building has
+        become more important in recent times. Businesses, for example, museums want to be able
+        to locate the part of a building where a visitor is based on signals received from static
+        sensory devices such as beacons and radio frequency tags. Other businesses such as
+        shopping-malls, hotels, airports, universities, inventory and logistics companies want
+        to be able to track and monitor movement in and out of their facilities, to provide
+        personalized services to their customers and personal users want to automate control
+        processes in the home using smart devices to turn on and off the lights, to change
+        the ambience of a room, to play music and watch their favourite shows on a Smart TV
+        and to identify any person within the house. IoT devices are already an integral
+        part of a smart home and can be leveraged on to determine the proximity of objects
+        or people within the room or the house whichever the case may be.<a href="#r2">[2]</a>.
       </p>
 	</section>
   <section>
@@ -103,38 +104,56 @@
     </p>
   </section>
     <section>
-    	<h2> 2. Gegenüberstellung verschiedener Anbieter</h2>
-    	<h3> 2.1. Allgemeiner Überblick </h3>
-
+    	<h2>Chapter 2 - Most common positioning techniques </h2>
+    	<h3>2.1 - Received signal strength indicator (RSSI)</h3>
     	<p>
-        Wiederherstellung älterer Versionen bieten <a href="#r3">[3]</a>.
+        The received signal strength is a very simple approach which is widely used for indoor location
+        identification. It works on the principle that the closest receiver to the transmitting device will
+        have the strongest signal. It can easily be used to provide proximity services for many technologies.
+        It is the fundamental technique used in WiFi positioning system, bluetooth low energy
+        <a href="#r6">[6]</a>.
     	</p>
-        <figure>
-        <pre>
-            function createAndSendDocument() {
-              // Create a new Google Doc named 'Hello, world!'
-              var doc = DocumentApp.create('Hello, world!');
-
-            }
-        </pre>
-        <figcaption>
-            <strong>Listing 1</strong>: Beispiel Google Script: Spreadsheet erstellen und Link per Mail senden <a href="#r7">[7]</a>
-
-        </figcaption>
-        </figure>
     </section>
     <section>
-    	<h3>2.2. Datenschutz und -sicherheit</h3>
+    	<h3>2.2 -  Fingerprinting</h3>
     	<p>
-        some text
+        Fingerprinting uses signal measurements across buildings to compute one’s position. Every transmitting
+         device is pre-recorded with a unique identification. This makes it possible to determine the device from
+         which a particular signal is coming from. Then, it becomes possible to compare received signals with
+         existing records to figure out current position. However, fingerprinting does have a limitation.
+         First, it only works when in motion, and second, it requires continuous stable signals over time.
+         This technique can either be used alone or to improve the accuracy of other positioning technologies
+         (usually those based on trilateration). Moreover, it is possible to simultaneously combine fingerprinting
+         from multiple sources to increase accuracy. Here’s a list of technologies that can take advantage of
+         fingerprinting: Radio frequency identification, Bluetooth low energy and WiFi.
     	</p>
-
     </section>
     <section>
-    	<h2>3. Alternativen</h2>
-    	<h3>3.1. BitTorrent Sync</h3>
+      <h3>2.3 - Trilateration</h3>
+      <p>
+        Trilateration positioning works in a similar way to how trilateration works with outdoor positioning
+        where it relies on up to four satellites connecting to calculate the exact distance an object or people
+        are. In order to apply it to indoor positioning, we use computed distances between several emitters and
+        a receiver to compute the position of the latter. Distances are determined either by RSSI or by Time of
+        Flight algorithms. ToF is a method that measures the distance between an emitter and a device and is
+        based on the time difference between the emission of a signal and its return to the sender. Unlike RSSI,
+        ToF involves roundtrip communication and complex signal processing that require dedicated chipsets.
+        This comes with both a better accuracy and a higher cost. Here are technologies using trilateration.
+      </p>
+    </section>
+    <section>
+    	<h2>Chapter 3 - Technologies for indoor positioning with their advantages</h2>
+    	<h3>3.1 - Wireless Local Area Network (WLAN) or (WIFI)</h3>
     	<p>
-        some textingn <a href="#r2">[2]</a>.
+        It is a technology based on the IEEE 802.11 standard. It is used to provide wireless network connection
+        between different devices and to connect to the Internet in mixed environments. WiFi has become ubiquitous
+        since it is readily available in almost all smart phones, laptops other portable devices. This makes WiFi
+        an ideal candidate for positioning system and one of the most widely researched positioning technologies.
+        Since there are existing wireless access points, we can easily connect any WiFi-enabled devices to it.
+        WiFi can utilize received signal strength indicator (RSSI) technique to determine the proximity of an
+        object or person based on the level of the signal received. It is also one of the cheapest technologies
+        that can be used to implement an indoor positioning system since all the required devices are readily available
+        <a href="#r7">[7]</a>.
     	</p>
 
 	  </section>
@@ -302,6 +321,16 @@
           [5] Matrix Voice Official documentation (Unknown Date).What a Raspberry Pi is [Online].
           Available: <a href="https://www.matrix.one/products/voice">
           https://www.matrix.one/products/voice</a>[Accessed June 27, 2019].
+        </p>
+        <p class="reference" id="r6">
+          [6] Cornell University (2017, September 4). A Survey of Indoor Localization Systems and Technologies [Online].
+          Available: <a href="https://arxiv.org/abs/1709.01015">
+          https://arxiv.org/abs/1709.01015</a>[Accessed June 25, 2019].
+        </p>
+        <p class="reference" id="r7">
+          [7] Infsoft (2015, September 29). Indoor Navigation Using Wi-Fi as a Positioning Technology [Online].
+          Available: <a href="https://www.infsoft.com/blog-en/articleid/40/indoor-navigation-using-wifi-as-a-positioning-technology">
+          https://www.infsoft.com/blog-en/articleid/40/indoor-navigation-using-wifi-as-a-positioning-technology</a>[Accessed June 25, 2019].
         </p>
 	</section>
 
