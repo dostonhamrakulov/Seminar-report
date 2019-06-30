@@ -26,6 +26,12 @@
       #scroolUpButton:hover {
         background-color: red;
       }
+      table, th, td {
+        border: 1px solid black;
+      }
+      th, td {
+        width: 50%;
+      }
   </style>
 </head>
 <body>
@@ -155,6 +161,39 @@
         that can be used to implement an indoor positioning system since all the required devices are readily available
         <a href="#r7">[7]</a>.
     	</p>
+      <table style="width:100%">
+        <tr>
+          <th >Advantages</th>
+          <th>Disadvantages</th>
+        </tr>
+        <tr>
+          <td>  Indoor positioning works without GPS</td>
+          <td>  Relatively inaccurate (5-15m) compared to BLE/RFID</td>
+        </tr>
+        <tr>
+          <td> Existing Wi-Fi infrastructure can be used</td>
+          <td> Wi-Fi client-based positioning is not possible with iOS devices – but BLE can be used as an        alternative</td>
+        </tr>
+        <tr>
+          <td> Enabled Wi-Fi is sufficient</td>
+          <td> Application required for analyzing the data.</td>
+        </tr>
+        <tr>
+          <td> There is a back channel to the client</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Large range (up to 150m)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Detects floor level</td>
+          <td></td>
+        </tr>
+      </table>
+      <ul>
+        <li>  Indoor positioning works without GPS</li>
+      </ul>
 
 	  </section>
     <section>
