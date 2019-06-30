@@ -191,18 +191,51 @@
           <td></td>
         </tr>
       </table>
-      <ul>
-        <li>  Indoor positioning works without GPS</li>
-      </ul>
-
 	  </section>
     <section>
-    	<h3>3.2 ownCloud</h3>
+    	<h3>3.2 - Bluetooth low energy (BLE)</h3>
 
     	<p>
-        Jedoch ganz ohne Schattenseite ist auch diese Alternative nicht. Gewisse Kenntnisse über Server, Netzwerke und Sicherheitsprotokolle sollten vorhanden sein
-        <a href="#r5">[5]</a>. Zudem ist die Hochverfügbarkeit, wie sie bei Dropbox oder Google herrscht, nicht gewährt.
+        Bluetooth positioning systems makes use of Bluetooth technology to implement location identification.
+        Radio-based devices operate on the principle of receiver and transmitter. Bluetooth low energy (BLE)
+        devices popularly known as beacons are used to transmit the emitted signals that can be read either by
+        smartphones located in the emission area. The more deployed beacons, the more accurate the position.
+        User position is then associated to the location of the BLE device with the strongest signal.
+        Different positioning techniques can be used in BLE, but the mostly implemented technique is the
+        RSSI based systems. It is very similar to how a WiFi -based positioning works.
+        <a href="#r8">[8]</a>.
     	</p>
+      <table style="width:100%">
+        <tr>
+          <th >Advantages</th>
+          <th>Disadvantages</th>
+        </tr>
+        <tr>
+          <td>Cost-effective, simple hardware such as beacons</td>
+          <td>Additional hardware</td>
+        </tr>
+        <tr>
+          <td>Low energy consumption</td>
+          <td>App is required for client-based solutions</td>
+        </tr>
+        <tr>
+          <td>Flexible integration into the existing infrastructure (battery-powered or power
+            supply via lamps and the domestic electrical system)</td>
+          <td>Relatively small range (up to 30m)</td>
+        </tr>
+        <tr>
+          <td>Works where other positioning techniques do not have a signal</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Compatible with iOS and Android</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>High accuracy compared to WiFi (up to 1m)</td>
+          <td></td>
+        </tr>
+      </table>
   	</section>
     <section>
     	<h2>Chapter 4 - Practical Part</h2>
@@ -369,7 +402,14 @@
         <p class="reference" id="r7">
           [7] Infsoft (2015, September 29). Indoor Navigation Using Wi-Fi as a Positioning Technology [Online].
           Available: <a href="https://www.infsoft.com/blog-en/articleid/40/indoor-navigation-using-wifi-as-a-positioning-technology">
-          https://www.infsoft.com/blog-en/articleid/40/indoor-navigation-using-wifi-as-a-positioning-technology</a>[Accessed June 25, 2019].
+          https://www.infsoft.com/blog-en/articleid/40/indoor-navigation-using-wifi-as-a-positioning-technology
+        </a>[Accessed June 25, 2019].
+        </p>
+        <p class="reference" id="r8">
+          [7] Infsoft (2016, May 16). Indoor Tracking Using Beacons or RFID – What Are the Differences? [Online].
+          Available: <a href="https://www.infsoft.com/blog-en/articleid/60/indoor-tracking-using-beacons-or-rfid-what-are-the-differences">
+          https://www.infsoft.com/blog-en/articleid/60/indoor-tracking-using-beacons-or-rfid-what-are-the-differences
+        </a>[Accessed June 25, 2019].
         </p>
 	</section>
 
