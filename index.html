@@ -81,32 +81,32 @@
   <section>
     <h3>1.2 -  Introduction to Indoor User Location Identification in a smart home</h3>
     <p>
-      First of all, it is ideal to understand what a smart home is and one good definition says that
-      “A smart home, or smart house, is a home that incorporates advanced automation systems to provide
+      First of all, it is ideal to understand what a smart home is and one good definition says that:
+      “A smart home, or a smart house, is a home that incorporates advanced automation systems to provide
       the inhabitants with sophisticated monitoring and control over the building's functions.
       For example a smart home may control lighting, temperature, multimedia, security, window and
       door operations, as well as many other functions”<a href="#r3">[3]</a>.
     </p>
     <p>
-      Year by year, the area of building smart home is enlarging and having more capabilities, features.
-      One of the new features is the voice controlling where a user should be able to command by the voice
-      and all functions which are mentioned in core definition should be implemented by this voice command.
+      Year by year, the sector of smart home buildings is increasing in the number of participants and this has led to a typical smart home 
+      having more capabilities and features. One of the new features is the voice controlling where a user using spoken words, is
+      able to command  virtual assistant agents(Google assistant or Cortana for example)by voice and all functions which are mentioned in core definition should be implemented by this virtual assistant agents.
     </p>
   </section>
   <section>
     <h3>1.3 - Our research direction</h3>
     <p>
-      Voice command for the smart home is a new trend and smart home system need to receive user commands
-      via voice. At the same time, smart home system should be aware of the location of the user while
-      receiving commands, in order to provide better service. For example, if a user walks to Kitchen
-      at night and says “Switch the light on”, then the system should switch the light on up to the
-      user reaches to the Kitchen. The user does not need to mention which light or light, there might
-      be multiple lights until Kitchen such corridors, stairs. There have been many ways to know approximate
-      location of the user such as using Beacons, Bluetooth or WiFi technologies. But all of those approaches
-      requires the user to carry a device.
+      Voice command for the smart home is a new trend and smart home systems need to receive user commands
+      via voice. At the same time, smart home systems should be aware of the location of the user while
+      receiving these commands, in order to provide better services. For example, if a user walks to the kitchen
+      at night and says “Switch the light on”, then the system should switch the light on up until the
+      user reaches the Kitchen. The user does not need to mention the sepcific light, there might
+      be multiple lights in and around the Kitchen. For example, on the corridors, the stairs. There have been many ways to know the approximate
+      location of the user such as using Bluetooth Beacons, RFID tags or WiFi technologies. But all of those approaches
+      require the user to carry a device.
       <br>
-      Therefore, we have decided to make research on the voice location
-      for indoor user location identification for a smart home.
+      Therefore, we have decided to base our research on the use of voice location
+      for indoor user location identification in a smart home.
     </p>
   </section>
     <section>
@@ -116,7 +116,7 @@
         The received signal strength is a very simple approach which is widely used for indoor location
         identification. It works on the principle that the closest receiver to the transmitting device will
         have the strongest signal. It can easily be used to provide proximity services for many technologies.
-        It is the fundamental technique used in WiFi positioning system, bluetooth low energy
+        It is the fundamental technique used in WiFi positioning system and bluetooth low energy devices.
         <a href="#r6">[6]</a>.
     	</p>
     </section>
@@ -128,7 +128,7 @@
          which a particular signal is coming from. Then, it becomes possible to compare received signals with
          existing records to figure out current position. However, fingerprinting does have a limitation.
          First, it only works when in motion, and second, it requires continuous stable signals over time.
-         This technique can either be used alone or to improve the accuracy of other positioning technologies
+         This technique can either be used alone or combined to improve the accuracy of other positioning technologies
          (usually those based on trilateration). Moreover, it is possible to simultaneously combine fingerprinting
          from multiple sources to increase accuracy. Here’s a list of technologies that can take advantage of
          fingerprinting: Radio frequency identification, Bluetooth low energy and WiFi.
@@ -144,7 +144,8 @@
         Flight algorithms. ToF is a method that measures the distance between an emitter and a device and is
         based on the time difference between the emission of a signal and its return to the sender. Unlike RSSI,
         ToF involves roundtrip communication and complex signal processing that require dedicated chipsets.
-        This comes with both a better accuracy and a higher cost. Here are technologies using trilateration.
+        This comes with both a better accuracy and a higher cost. Here are technologies that can make use of trilateration: 
+        Bluetooth low energy, WiFi, Visible lights, etc.
       </p>
     </section>
     <section>
@@ -201,8 +202,8 @@
         devices popularly known as beacons are used to transmit the emitted signals that can be read either by
         smartphones located in the emission area. The more deployed beacons, the more accurate the position.
         User position is then associated to the location of the BLE device with the strongest signal.
-        Different positioning techniques can be used in BLE, but the mostly implemented technique is the
-        RSSI based systems. It is very similar to how a WiFi -based positioning works.
+        Different positioning techniques can be used in BLE, but the most widely implemented technique is the
+        RSSI based systems. It is very similar to how a WiFi-based positioning works. It can also be combined with other techniques to increase the accuracy.
         <a href="#r8">[8]</a>.
     	</p>
       <table style="width:100%">
@@ -298,7 +299,7 @@
         to determine the positioning and the direction of the LED emitters. Angle of Arrival technique is
         the most used to implement a VLC for positioning <a href="#r11">[11]</a>. The advantage of visible light
         communication is
-        that it can easily be installed in a house in a large scale with disrupting anything. The downside
+        that it can easily be installed in a house in a large scale without disrupting anything. The downside
         is that it requires a direct line of sight communication for it to work.
       </p>
       <table style="width:100%">
@@ -354,7 +355,7 @@
         <a href="#r12">[12]</a>.
         <br>
         In order to effectively use this method, it is recommended to make use of grid-like set of
-        speakers like the  matrix-voice capable device which can easily pick up sound from all
+        speakers like the  Matrix Voice. These are capable devices which can easily pick up sound from all
         directions of the room. Using an angle of arrival or direction of arrival technique,
         we can determine the direction of travel from the sound source to the receiver, this
         helps to provide the angle the sound emanates from.
@@ -362,7 +363,7 @@
     </section>
     <section>
     	<h2>Chapter 4 - Practical Part</h2>
-    	<h3>4.1 - Introduction to used tools and devices</h3>
+    	<h3>4.1 - Introduction to the used tools and devices</h3>
     	<p>
         In this research project we have used several tools and devices to implement theoretical concepts.
         These devices and tools are following:
@@ -380,7 +381,7 @@
       <h5>Raspberry Pi:</h5>
       <p>
         We have Raspberry Pi 2 B and we have installed Raspbian OS on it. The Raspberry Pi is used
-        to allow other devices to be accessible. The definition of Raspberry Pi say that
+        so we can access the other devices by installing their drivers on the it. The definition of Raspberry Pi say that
         “The Raspberry Pi is a low cost, credit-card sized computer that plugs into a computer monitor or TV,
         and uses a standard keyboard and mouse. It is a capable little device that enables people of all ages
         to explore computing, and to learn how to program in languages like Scratch and Python. It’s capable of
@@ -410,8 +411,8 @@
 
       <h5>USB WiFi Adapter:</h5>
       <p>
-        We used USB WiFi Adapter to connect Raspberry Pi to the internet without using WLAN cable and
-        Raspberry Pi which we used is 2 B model and does not have WiFi capability.
+        We used USB WiFi Adapter to connect Raspberry Pi to the internet without the need for a LAN cable and the
+        Raspberry Pi which we used is 2 B model and does not have WiFi capability by default.
       </p>
 
       <h5>Speaker:</h5>
@@ -444,18 +445,18 @@
           Google Assistant which uses Matrix Voice for voice input and we have spoken to that Customized
           Google Assistant from different range of distance such as starting 1 meter up to 15 meters and
           from collected data, we could conclude that the voice between 1 and 12 meters is fully delivered
-          and from 12 meters the voice’s quality is low and Google Assistant was not recording correct context.
+          and from 12 meters the voice’s quality got low and Google Assistant was not recording the correct context.
         </p>
 	  </section>
     <section>
       <h3>4.4 - Determining the direction of the voice</h3>
       <p>
-        The direction of the user’s voice is possible to determine with Matrix Voice due to the fact
-        that Matrix Voice has microphones which are collected in certain cardinalities and from those
-        cardinalies can determine the direction of the voice. As <a href="#Figure_4-2">Figure 4.2</a>,
+        The direction of the user’s voice can be determined with a Matrix Voice due to the fact
+        that Matrix Voice has microphones which are placed in certain cardinalities and from those
+        cardinalities can determine the direction of the voice. As <a href="#Figure_4-2">Figure 4.2</a>,
         shows that each microphone
         has X and Y cardinalities and each microphone produces distinct voice strength, depending
-        on which a microphone is targeted.
+        on which microphone is targeted.
       </p>
       <figure>
           <img id="Figure_4-4" src="Figure_4-4.png" alt="Directed Voice to distinct microphone of Matrix Voice"/>
@@ -465,18 +466,18 @@
       </figure>
       <p>
         As long as the voice is recorded, each microphone produces different voice strength as
-        it is shown in <a href="#Figure_4-2">Figure 4.2</a>. For example, as in <a href="#Figure_4-3">Figure 4.3</a>, the user speaks towards microphones
-        and we can check a voice strength and compare it with actual voice strength of each microphone.
-        In the <a href="#Figure_4-4">Figure 4.4</a>, we have described that a user speaking to Microphone M3 and it has voice
-        strengths between 12 000 and 16 000, and we compare a taken voice strength in that range
+        it is shown in <a href="#Figure_4-2">Figure 4.2</a>. For example, as in <a href="#Figure_4-3">Figure 4.3</a>, the user speaks towards the microphones
+        and we can check the voice strength and compare it with actual voice strength of each microphone.
+        In the <a href="#Figure_4-4">Figure 4.4</a>, we have described that a user is speaking to Microphone M3 and it has voice
+        strengths between 12 000 and 16 000, and we can compare the taken voice strength in that range
         as it is shown. If the received voice strength is between those range, we can say that
         a user is speaking to Microphone M3 and most importantly from this point, we can determine
         the direction due to cardinalities of M3.
         <br>
-        Having understood working principles of obtaining a direction of the voice,
-        we can conclude that this approach can be enhanced by increasing the number of Matrix Voices
-        devices (input points). To get optimal a direction of the voice, it is enough to have
-        3 Matrix Voices input points. The <a href="#Figure_4-5">Figure 4.5</a> shows that we can obtain an intersection
+        Having understood the working principles of obtaining the direction of the voice,
+        we can conclude that this approach can be enhanced by increasing the number of Matrix Voice
+        devices (input points). To get an optimal direction of the voice, it is enough to have
+        3 Matrix Voice input points. The <a href="#Figure_4-5">Figure 4.5</a> shows that we can obtain an intersection
         point of all cardinalities of 3 Matrix Voice while those 3 Matrix Voice will receive
         the voice and produce different cardinalities for a targeted microphone.
       </p>
@@ -546,8 +547,8 @@
           [10] Philip Karantzalis and Daiheng Ni, ScienceDirect (2015/16).
           Radio-frequency identification (RFID) [Online].
           Available:
-          <a href="https://www.researchgate.net/publication/4340245_Ultra_wideband_technology_and_its_applications">
-          https://www.researchgate.net/publication/4340245_Ultra_wideband_technology_and_its_applications
+          <a href="https://www.sciencedirect.com/topics/engineering/radio-frequency-identification">
+            https://www.sciencedirect.com/topics/engineering/radio-frequency-identification
         </a>[Accessed June 28, 2019].
         </p>
         <p class="reference" id="r11">
@@ -566,7 +567,14 @@
           https://www.hackster.io/matrix-labs/direction-of-arrival-for-matrix-voice-creator-using-odas-b7a15b
         </a>[Accessed June 29, 2019].
         </p>
-	</section>
+  </section>
+  <section>
+          <h3>7. Credits</h3>
+          <p>
+            Note: the images used in this report were designed or redesigned by the writers, so there is no need of citing them in the report!
+          </p>
+
+  </section>
 
   <script>
     // When the user scrolls down 20px from the top of the document, show the button
